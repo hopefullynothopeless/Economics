@@ -174,7 +174,7 @@ function getMinResults(T1, T2, T3, Z1, Z2, Z3){
 }
 
 function calcMonthsForPeriods(){
-	let D = new Array();
+	let D = [];
 	for (let i = 0;i < beta.length;i++){
 		D.push((beta[i]/100 * minValues[2]).toFixed(2));
 	}
@@ -185,8 +185,8 @@ function calcOptimalEmployeeNumbers(){
 	employee_labor = minValues[0];
 	employees = minValues[1];
 	months = minValues[2];
-	let Z = new Array();
-	let D = new Array();
+	let Z = [];
+	let D = [];
 	console.log("Этапы жизненного цикла:")
 	for (let i = 0; i < alpha.length;i++){
 		let value = (alpha[i] * employee_labor) / (beta[i] * months);
